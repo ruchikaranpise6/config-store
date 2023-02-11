@@ -1,0 +1,15 @@
+server:
+  port: 8084
+
+spring:
+  application:
+    name: spring-cloud-api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: TRIP-SERVICE
+          uri: lb://TRIP-SERVICE
+          predicates:
+            - Path= /trips/**
+
+
