@@ -53,8 +53,8 @@ resilience4j:
         permittedNumberOfCallsInHalfOpenState: 3
         slidingWindowSize: 10
         slidingWindowType: COUNT_BASED
- retry:
-   instances:
-     customPackageCircuitBreaker:
-       max-attempts: 3
-       wait-duration: 2sec
+  retry:
+    instances:
+      customPackageCircuitBreaker:
+        maxRetryAttempts: 3
+        waitDuration: 2sec
