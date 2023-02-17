@@ -55,6 +55,12 @@ resilience4j:
         slidingWindowType: COUNT_BASED
   retry:
     instances:
-      customPackageCircuitBreaker:
+      customPackageCircuitRetry:
         maxRetryAttempts: 3
         waitDuration: 2s
+  ratelimiter:
+    instances:
+      CustomTripRateLimiter:
+        limitRefreshPeriod: 4s
+        limitForPeriod: 2
+        timeoutDuration: 0
