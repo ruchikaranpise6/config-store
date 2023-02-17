@@ -57,4 +57,4 @@ resilience4j:
     instances:
       customPackageCircuitBreaker:
         maxRetryAttempts: 3
-        waitDuration: 2sec
+        waitDuration: 2s
