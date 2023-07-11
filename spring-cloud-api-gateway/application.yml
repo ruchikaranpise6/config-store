@@ -13,9 +13,9 @@ spring:
             - Path= /trips/**
 
         - id: CUSTOM-TRIP-SERVICE
-            uri: lb://CUSTOM-TRIP-SERVICE
-            predicates:
-              - Path= /custom-trip/**
+          uri: lb://CUSTOM-TRIP-SERVICE
+          predicates:
+            - Path= /custom-trip/**
 eureka:
   instance:
     prefer-ip-address: true
