@@ -16,6 +16,11 @@ spring:
           uri: lb://CUSTOM-TRIP-SERVICE
           predicates:
             - Path= /custom-trip, /custom-trip/**
+
+        - id: SPRING-SECURITY-DEMO
+          uri: lb://SPRING-SECURITY-DEMO
+          predicates:
+            - Path= /security/**
 eureka:
   instance:
     prefer-ip-address: true
