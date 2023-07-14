@@ -11,11 +11,15 @@ spring:
           uri: lb://TRIP-SERVICE
           predicates:
             - Path= /trips, /trips/**
+          filters:
+            - AuthenticationFilter
 
         - id: CUSTOM-TRIP-SERVICE
           uri: lb://CUSTOM-TRIP-SERVICE
           predicates:
             - Path= /custom-trip, /custom-trip/**
+          filters:
+            - AuthenticationFilter
 
         - id: SPRING-SECURITY-DEMO
           uri: lb://SPRING-SECURITY-DEMO
