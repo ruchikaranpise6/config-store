@@ -8,6 +8,7 @@ spring:
 eureka:
   instance:
     prefer-ip-address: true
+    instance-id: "${spring.application.name}:${random.value}"
   client:
     register-with-eureka: true
     fetch-registry: true
@@ -18,4 +19,4 @@ management:
   endpoints:
     web:
       exposure:
-        include: info
+        include: info, health
