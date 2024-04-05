@@ -6,16 +6,16 @@ spring:
     name: trip-service
   datasource:
     driver: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3307/trip
+    url: jdbc:mysql://localhost:3306/trip
     username: root
-    password: root
+    password: 12345678
   flyway:
     enabled: true
     schemas: trip
 
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-update: auto
     show-sql: true
     properties:
       hibernate:
