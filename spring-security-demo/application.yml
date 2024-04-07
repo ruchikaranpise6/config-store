@@ -9,7 +9,7 @@ spring:
     name: spring-security-demo
   datasource:
     driver: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3307/security-test
+    url: jdbc:mysql://localhost:3307/security-test?createDatabaseIfNotExist=true
     username: root
     password: root
 
