@@ -4,6 +4,11 @@ server:
 spring:
   application:
     name: spring-cloud-api-gateway
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:9090/realms/microservice-practice-realm
   cloud:
     gateway:
       routes:
@@ -11,15 +16,15 @@ spring:
           uri: lb://TRIP-SERVICE
           predicates:
             - Path= /trips, /trips/**
-          filters:
-            - AuthenticationFilter
+          #filters:
+          #  - AuthenticationFilter
 
         - id: CUSTOM-TRIP-SERVICE
           uri: lb://CUSTOM-TRIP-SERVICE
           predicates:
             - Path= /custom-trip, /custom-trip/**
-          filters:
-            - AuthenticationFilter
+          #filters:
+          #  - AuthenticationFilter
 
         - id: SPRING-SECURITY-DEMO
           uri: lb://SPRING-SECURITY-DEMO
